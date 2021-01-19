@@ -1,8 +1,13 @@
 local t = Def.ActorFrame{
 	LoadActor(THEME:GetPathB("ScreenWithMenuElements","underlay/_sides"))..{
-		InitCommand=cmd(ztest,true);
-	};
-	LoadActor(THEME:GetPathB("ScreenWithMenuElements","underlay/_base"));
+		InitCommand=function(self) self:ztest(true) end
+	},
+	LoadActor(THEME:GetPathB("ScreenWithMenuElements","underlay/_base")),
+
+	LoadActor(THEME:GetPathB("ScreenWithMenuElements","underlay/_expandtop")),
+
+	StandardDecorationFromFileOptional("StyleIcon","StyleIcon"),
+	StandardDecorationFromFileOptional("StageDisplay","StageDisplay"),
 
 	Def.ActorFrame{
 		Name="SelButtonMenu";

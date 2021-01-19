@@ -1,7 +1,7 @@
 local t = Def.ActorFrame{
-	LoadActor(THEME:GetPathG("_dynamic","headers/SelectPlayMode"))..{
-		InitCommand=cmd(x,SCREEN_CENTER_X;y,SCREEN_TOP+30;);
-		OnCommand=cmd(zoom,1.3;);
+	LoadActor( THEME:GetPathG("_dynamic","headers"), Var "LoadingScreen" )..{
+		InitCommand=function(self) self:xy(SCREEN_CENTER_X,SCREEN_TOP+30) end,
+		OnCommand=function(self) self:zoom(1.3) end
 	};
 	LoadFont("_z bold gray 36px")..{
 		Text="GAME SELECTION";

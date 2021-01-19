@@ -1,8 +1,6 @@
-local t = Def.ActorFrame{};
+local t = Def.ActorFrame{}
 t[#t+1] = StandardDecorationFromFileOptional("Header","Header")
 t[#t+1] = StandardDecorationFromFileOptional("Footer","Footer")
-t[#t+1] = StandardDecorationFromFileOptional("StyleIcon","StyleIcon")
-t[#t+1] = StandardDecorationFromFileOptional("StageDisplay","StageDisplay")
 t[#t+1] = StandardDecorationFromFileOptional("Help","Help")
 
-return t;
+return t

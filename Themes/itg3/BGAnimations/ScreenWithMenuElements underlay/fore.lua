@@ -1,5 +1,5 @@
 local t = Def.ActorFrame{
-	LoadActor("_normaltop");
-};
+	LoadActor("_normaltop")
+}
 
-return t;
+return t
